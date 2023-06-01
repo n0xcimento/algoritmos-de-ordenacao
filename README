@@ -1,0 +1,5 @@
+Os dados nos arquivos *.dat possuem quatro colunas, cada uma tendo o seguinte significado:
+	coluna 1: Quantidade de elementos da no vetor.
+	coluna 2: Tempo que o algoritmo consumiu para processar a instância.
+	coluna 3: Quantidade de trocas que o algoritmo realizou.
+	coluna 4: Quantidade de comparações que o algoritmo fez.
