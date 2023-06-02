@@ -1377,24 +1377,31 @@ n   &   Tempo(seg)   &   Comparações     &    Trocas    \\
 
 
 \section{Gráficos}
-A partir das tabelas anteriores, foram gerados os gráficos a seguir com o objetivo de comparar o comportamento dos algoritmos de forma visual. Desse modo, em cada gráfico há o comportamento de todo
+A partir das tabelas anteriores, foram gerados os gráficos a seguir com o objetivo de comparar o comportamento dos algoritmos de forma visual. Desse modo, em cada gráfico, há o comportamento de todos os algoritmo para as devidas instâncias, que estão especificadas em cada gráfico. Deve-se deixar claro que, por conta das grandes diferenças de execução de algoritmos eficientes e não eficiente, alguns gráficos dão a impressão que certos algoritmos tiveram um comportamento costante, ficando apenas em 0 (zero).
 
 \begin{figure}[h]
 \centering
 \caption{Aleatório, N x Tempo}
 \includegraphics[width=0.8\textwidth]{graphs/aleatório-tempo.png}
+
+Na Figura 1, os algoritmos que mais custaram para terminar de executar as grandes instâncias foram o bubble, insertion, selection e gnome. Os demais não levaram um pouco menos de 1 segundo de tempo, como se pode ver no gráfico.
 \end{figure}
+
 
 \begin{figure}[h]
 \centering
 \caption{Aleatório, N x Comparações}
 \includegraphics[width=0.8\textwidth]{graphs/aleatório-comparações.png}
+
+Na figura 2, os algoritmos que mais realizaram comparações para processar um vetor disposto de forma aleatório foram o bubble, selection e gnome sort. Quanto aos demais algoritmos, eles tiveram uma quantidade significativa de comparações, mas não tanto como os três algoritmos citados.
 \end{figure}
 
 \begin{figure}[h]
 \centering
 \caption{Aleatório, N x Trocas}
 \includegraphics[width=0.8\textwidth]{graphs/aleatório-trocas.png}
+
+Como mostra a Figura 3, os algoritmos que mais realizaram trocas para ordenar um vertor com os elementos desordenados aleatoriamente foram o insertion e bubble sortl. Porém, diferente do que o gráfico mostra, os demais algoritmos tiveram uma grande quantidade de trocas, no processamento, mas não tanta como os dois algoritmos citados.
 \end{figure}
 
 
@@ -1402,6 +1409,9 @@ A partir das tabelas anteriores, foram gerados os gráficos a seguir com o objet
 \centering
 \caption{Decrescente, N x Tempo}
 \includegraphics[width=0.8\textwidth]{graphs/decrescente-tempo.png}
+
+Na Figura 4, os algorimos que levaram mais tempo para executar entradas maiores foram o bubblesort, insertionsort, selectionsort e gnomesort. Os demais algoritmos não levaram nem sequer 1 segundo para executar instâncias de $1\times10^6$.
+
 \end{figure}
 
 \begin{figure}[h]
@@ -1414,6 +1424,8 @@ A partir das tabelas anteriores, foram gerados os gráficos a seguir com o objet
 \centering
 \caption{Decrescente, N x Trocas}
 \includegraphics[width=0.8\textwidth]{graphs/decrescente-trocas.png}
+
+Como é possível ver na Figura 6, os algoritmos que realizaram mais trocas foram o bubble, insertion e gnome. Os demais tiveram um quantidade de trocas significativas, mas, comparado aos anteriores, eles realizaram bem poucas, quase linear à quantide de elementos.
 \end{figure}
 
 
@@ -1421,12 +1433,18 @@ A partir das tabelas anteriores, foram gerados os gráficos a seguir com o objet
 \centering
 \caption{Crescente, N x Tempo}
 \includegraphics[width=0.8\textwidth]{graphs/crescente-tempo.png}
+
+Na Figura 7, apesar do vetor já está ordenado, alguns algoritmos levaram um tempo considerável só para verificar o estado do vetor, como foram os casos do bubblesort e do selectionsort. Os demais algorimos não levaram nem 1 segundo para processar vetores ordenados de $1\times10^6$. Isso se dá ao fato que tanto o bubble quanto o selection sort verificam todos os elementos do vetor para cada elemento, na busca de colocá-lo na lugar correto.
+
 \end{figure}
 
 \begin{figure}[h]
 \centering
 \caption{Crescente, N x Comparações}
 \includegraphics[width=0.8\textwidth]{graphs/crescente-comparações.png}
+
+Já na Figura 8, os algorimtos que mais realizaram comparações em um vetor ordenado foram o bubble e selection sort. Novamente, como foi dito, esses algorimtos verificam todos os elementos do vetor para cada elemento, na busca de colocá-lo na lugar correto.
+
 \end{figure}
 
 \section{Considerações}
@@ -1438,8 +1456,4 @@ A partir das tabelas anteriores, foram gerados os gráficos a seguir com o objet
 
 \appendix
 \onehalfspacing
-
-\chapter{Sequências}
-\label{ape:sequencias}
-
 \end{document}
