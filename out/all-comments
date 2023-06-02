@@ -1,0 +1,20 @@
+No gráfico aleatório-tempo, os algoritmos que mais custaram para terminar de executar as grandes instâncias foram o bubble, insertion, selection e gnome. Os demais não levaram um pouco menos de 1 segundo de tempo, como se pode ver No gráfico.
+
+No gráfico aleatório-comparações, os algoritmos que mais realizaram comparações para processar um vetor disposto de forma aleatório foram o bubble, selection e gnome sort. Quanto aos demais algoritmos, eles tiveram uma quantidade significativa de comparações, mas não tanto como os três algoritmos citados.
+
+
+No gráfico aleatório-trocas, os algoritmos que mais realizaram trocas para ordenar um vertor com os elementos desordenados aleatoriamente foram o insertion e bubble sortl. Porém, diferente do que o gráfico mostra, os demais algoritmos tiveram uma grande quantidade de trocas, no processamento, mas não tanta como os dois algoritmos citados.
+
+
+No gráfico decrescente-tempo, os algorimos que levaram mais tempo para executar entradas maiores foram o bubblesort, insertionsort, selectionsort e gnomesort. Os demais algoritmos não levaram nem sequer 1 segundo para executar instâncias de 1x10^6.
+
+
+No gráfico decrescente-trocas, os algoritmos que realizaram mais trocas foram o bubble, insertion e gnome. Os demais tiveram um quantidade de trocas significativas, mas, comparado aos anteriores, eles bem poucas, quase linear à quantide de elementos.
+
+
+No gráfico crescente-tempo, apesar do vetor já está ordenado, alguns algoritmos levaram um tempo considerável só para verificar o estado do vetor, como foram os casos do bubblesort e do selectionsort. Os demais algorimos não levaram nem 1 segundo para processar vetores ordenados de 1x10^6. Isso se dá ao fato que tanto o bubble quanto o selection sort verificam todos os elementos do vetor para cada elemento, na busca de colocá-lo na lugar correto.
+
+
+No gráfico crescente-comparações, os algorimtos qua mais realizaram comparações em um vetor ordenado foram o bubble e selection sort. Novamente, como foi dito, esses algorimtos verificam todos os elementos do vetor para cada elemento, na busca de colocá-lo na lugar correto.
+
+

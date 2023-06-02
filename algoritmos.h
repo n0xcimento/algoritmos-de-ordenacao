@@ -1,3 +1,4 @@
+#include "./auxiliares.c"
 #include "algoritmos/bubbleSort.c"
 #include "algoritmos/insertionSort.c"
 #include "algoritmos/selectionSort.c"
