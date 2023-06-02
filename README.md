@@ -1,4 +1,4 @@
-Para a compilação das implementações dos algoritmos, usa-se:
+﻿Para a compilação das implementações dos algoritmos, usa-se:
 
     gcc main.c -o exec
 
