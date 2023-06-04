@@ -69,7 +69,7 @@
 \ChapterStart{first}{First chapter}
 \chapter{Introdução}
 
-Conforme Cormen, um algoritmo é qualquer procedimento computacional bem definido que recebe algum valor, ou um conjunto de valores, como sua entrada e produz algum valor, ou um conjunto de valores, como sua saída, em uma quantidade finita de tempo.\\
+Conforme Cormen \cite{cormen}, um algoritmo é qualquer procedimento computacional bem definido que recebe algum valor, ou um conjunto de valores, como sua entrada e produz algum valor, ou um conjunto de valores, como sua saída, em uma quantidade finita de tempo.\\
 
 Uma instância de um problema consiste de uma entrada – tal que ela satisfaça as restrições impostas pelo problema – necessária para computar a solução do problema.\\
 
@@ -88,11 +88,13 @@ No presente relatório será abordado a análise empírica, sendo que ela avalia
 
 Apesar de algumas vantagens, a análise empírica tem suas desvantagens, como, por exemplo, se o programa for rodado várias vezes com a mesma instância, o tempo de execução necessário para processar tal instância pode variar. Além disso, para algumas instâncias, limitações de hardware podem limitar a análise.
 
+
 \chapter{Métodos}
 
-
 \section{Análise}
-Para realizar as análises empíricas dos algoritmos de ordenação, os seguintes algoritmos foram implementados na linguagem C. Foram eles bubblesort, gnomesort, heapsort, insertionsort, mergesort, quicksort, selectionsort, shellsort, e timsort. Para analisar tais algoritmos, foi-se passado para cada um deles uma instância contendo elementos em ordem aleatória, crescente e decrescente tal que essas instância possuíam $1\times10^{3}, 1\times10^{4}, \{1,2,...,8,9\}\times10^{5}$ e $1\times10^{6}$ elementos. Para medir e comparar a eficiência do processamento dos algoritmos para as diferentes instâncias passadas, foi-se contabilizado a quantidade de comparações e trocas que cada algoritmo realizou, bem como o tempo de execução necessário para ordenar a instância.
+Para realizar as análises empíricas dos algoritmos de ordenação, os seguintes algoritmos foram implementados na linguagem C. Foram eles Bubble, Gnome, Heap, Insertion, Merge, Quick, Selection, Shell, e Tim sort. Tais algoritmos foram retirados das seguintes fontes: \cite{cormen}, \cite{Backes} e \cite{geeks4geeks}. Para analisar tais algoritmos, foi-se passado para cada um deles uma instância contendo elementos em ordem aleatória, crescente e decrescente tal que essas instância possuíam $1\times10^{3}, 1\times10^{4}, \{1,2,...,8,9\}\times10^{5}$ e $1\times10^{6}$ elementos. Para medir e comparar a eficiência do processamento dos algoritmos para as diferentes instâncias passadas, foi-se contabilizado a quantidade de comparações e trocas que cada algoritmo realizou, bem como o tempo de execução necessário para ordenar a instância.\\
+
+É importante deixar claro que, como é uma análise empírica, o tempo de execução dos algoritmos testados aqui pode diferir de máquina para máquina, já que esse fator é dependente de hardware, visto que diferentes CPUs executam diferentes quantidades de instruções por segundo. Ainda sobre tempo de execução, se muitos processos estiverem rodando no mesmo momento que o algoritmo estiver executando, o tempo para processar a instância será mais demorado, uma vez que os núcleos de processamento terão de ser compartilhados entre os demais processos. Além disso, a quantidade de comparações e trocas que cada algoritmo realizou para determinadas instâncias podem diferir a depender da implementação para um mesmo algoritmo. Quero dizer, uma de duas implementações diferentes de um Bubble sort pode realizar menos comparações e trocas de elementos que uma outra implementação.
 
 
 \section{Hardware usado}
@@ -1448,6 +1450,13 @@ Já na Figura 8, os algorimtos que mais realizaram comparações em um vetor ord
 \end{figure}
 
 \section{Considerações}
+A partir da análise dos gráficos, pode-se perceber que em todos eles alguns algoritmos mantiveram seus comportamentos parecidos, independente da forma que os elementos estão dispostos na instância passada, isto é, aleatório, crescente ou decrescente. Como exemplo, nos três gráficos que envolvem o tempo, algoritmos como o Bubble, Insertion, Selection e Gnome sort foram os algoritmos que mais custaram para processar as instâncias, conforme a quantidade de elementos delas aumentava. Por outro lado, os demais levaram pouco menos de 1 segundo. Como consequência disso, algoritmos como o Tim, Heap e Merge são mais eficientes quanto ao tempo de processamento. O que já era de se esperar, visto que as complexidades de execução deles são melhores em comparação aos algoritmos antes citados.\\
+
+	Quanto à quantidade de comparações que os algoritmos realizaram para processar as devidas instâncias, pode ser visto nos três gráficos que envolvem $comparacoes$ que, de modo geral, os piores algoritmos foram o Selection, Gnome e Heap sort, sendo que os demais algoritmos realizaram tantas comparações quanto a quantidade de elementos da instância. Algoritmos que realizam poucas comparações são mais desejáveis para aplicações, visto que realizar essa tarefa exige trabalho da unidade de processamento da máquina. Desse modo, algoritmos como o Merge, Tim e Shell sort são mais almejados para aplicações que é voltada para manipular grandes quantidades de registros.\\
+
+	Por último, não menos importante, tem-se as considerações sobre a quantidade de trocas necessárias para ordenar as instâncias passadas para os algoritmos. Como pode-se notar nos gráficos de $trocas$, os algoritmos Gnome e Heap sort realizaram uma quantidade absurda de trocas para instâncias de $1\times10^{6}$ elementos. Assim como em quantidade de comparações, realizar poucas trocas é necessário para aplicações que envolvem muitos registros, visto que consome um certa quantidade de trabalho da unidade de processamento. Por esse motivo, para aplicações que buscam poupar trabalho desnecessário de CPU, algoritmos mais estratégicos são necessários, como o Shell, Merge e Tim sort, por exemplo.\\
+
+
 
 \backmatter 
 \singlespacing   
